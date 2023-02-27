@@ -1,31 +1,38 @@
-class Account
-     def interest_rate(amount)
-        case amount
-            when (0...1000)
-               0.5             
-             when (1000...5000)
-               1.621    
-             when (5000..)
-               2.475
-             else 
-               -3.213     
-      end
-   end
-   def annual_balance_update(principal)
-       rate = interest_rate(principal)
-    annual_interest = principal*rate*1/100
-     annual_interest + principal
-   end
-   def years_before_desired_balance(a, b)
-       count = 0
-       while (a < b )
-           a = annual_balance_update(a)
-           count +=1
-       end
 
-       puts count
-   end
+
+
+puts "Enter the first number:"
+n1 = gets.chomp.to_i
+
+puts "Enter the second number:"
+n2 = gets.chomp.to_i
+
+puts "1. ADDITION"
+puts "2. SUBTRACTION"
+puts "3. MULTIPLICATION"
+puts "4. DIVISION"
+
+puts "Enter the operation: "
+operation = gets.chomp
+
+addition = Proc.new { |a, b| a + b }
+subtraction = Proc.new { |a, b| a - b }
+multiplication = Proc.new { |a, b| a * b }
+division = Proc.new { |a, b| a / b }
+
+case operation
+when "1"
+  result = addition.call(n1, n2)
+when "2"
+  result = subtraction.call(n1, n2)
+when "3"
+  result = multiplication.call(n1, n2)
+when "4"
+  result = division.call(n1, n2)
+else
+  puts "You provide wrong input !! Please provide valid input"
+  exit
 end
-p1= Account.new
-p1.years_before_desired_balance(200.75,214.88)
+
+puts "Result is: #{result}"
 
