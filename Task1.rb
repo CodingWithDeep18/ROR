@@ -1,18 +1,44 @@
-EXPECTED_MINUTES_IN_OVEN = 40
-CONSTANT_TWO=2
-class Lasagna
- 
+require 'date'
+class Calculate
+  def calculate(date_of_brith)
+    birthdate = dob
+    now = DateTime.now
+    #years
+    years = now.year - birthdate.year
+    #months
+    months = now.month - birthdate.month
+    #days
+    days = now.day - birthdate.day
+    #hours
+    hours = now.hour - birthdate.hour
+    #minutes
+    minutes = now.min - birthdate.min
+    
+    if minutes < 0
+      hours -= 1
+      minutes += 60
+    end
+    
+    if hours < 0
+      days -= 1
+      hours += 24
+    end
 
-  def remaining_minutes_in_oven(time)
-     return EXPECTED_MINUTES_IN_OVEN - time
-  end
-  def preparation_time_in_minutes(layer)
-      return layer*CONSTANT_TWO
-  end 
-  def total_time_in_minutes(layer,time)
-      result= remaining_minutes_in_oven(time) + preparation_time_in_minutes(layer)
-      puts "#{result}"
+    if days < 0
+      months -= 1
+      last_month = now.next_month.prev_day
+      days += (last_month.day - birthdate.day + now.day)
+    end
+
+    if months < 0
+     years -= 1
+      months += 12
+    end
+
+    puts "Age: #{years} years, #{months} months, #{days} days, #{hours} hours, #{minutes} minutes"
   end
 end
-lasagna=Lasagna.new
-lasagna.total_time_in_minutes(3,20)
+
+a1 = Calculate.new
+date_of_birth = DateTime.new(2002,06,07,4,5)
+a1.calculate(date_of_birth)
