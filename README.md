@@ -1,1 +1,9 @@
-# ROR
+# ROR![o1](https://user-images.githubusercontent.com/126406127/224400204-0c9b7883-6de5-4f50-8990-e0a27491badb.PNG)
+![o2](https://user-images.githubusercontent.com/126406127/224400222-1361f641-e3ab-4c9f-ac3c-e03d7318d8fc.PNG)
+![o3](https://user-images.githubusercontent.com/126406127/224400242-77e5e6d6-3a0a-4916-abbf-e3367b1a1003.PNG)
+![o5](https://user-images.githubusercontent.com/126406127/224400264-58861224-f4bb-4066-9bbc-68ba4902a097.PNG)
+![o6](https://user-images.githubusercontent.com/126406127/224400293-63c56dd5-1d83-4f8a-8d65-e5e86e9acbf3.PNG)
+![o7](https://user-images.githubusercontent.com/126406127/224400332-bacf6f3d-1957-4fa1-847e-9c47259e72c4.PNG)
+![o8](https://user-images.githubusercontent.com/126406127/224400463-2a5310f3-fd8b-45d0-a17f-fe16138bceb4.PNG)
+![o9](https://user-images.githubusercontent.com/126406127/224400533-e19f662b-d039-405f-8d8d-0c70cebc0cd5.PNG)
+![010](https://user-images.githubusercontent.com/126406127/224400556-2e638867-9782-4fb6-bb55-9e5b97f086c2.PNG)
