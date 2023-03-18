@@ -1,0 +1,5 @@
+fr:
+  hello: "Bonjour, %{name}!"
+  users:
+    one: "1 utilisateur"
+    other: "%{count} utilisateurs"
