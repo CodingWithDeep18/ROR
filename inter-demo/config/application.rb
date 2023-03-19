@@ -10,7 +10,7 @@ module InterDemo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.i18n.available_locales = [:en, :fr]
+    config.i18n.available_locales = [:en, :fr, :de, :es]
     config.i18n.default_locale = :fr
 
     # puts I18n.t(:hello_world, count: 2)
