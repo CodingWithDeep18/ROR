@@ -1,0 +1,11 @@
+<% cache("products_list") do %>
+    <ul>
+      <% @cart.each do |product_id, quantity| %>
+        <li> <%= Product.find(product_id).product_name %> x <%= quantity %>
+          <%= form_tag carts_remove_from_cart_path(product_id: product_id), method: :delete do %>
+            <%= submit_tag 'Remove' %>
+          <% end %>
+        </li>
+        <% end %>
+    </ul>
+  <% end %>
