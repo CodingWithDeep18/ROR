@@ -1,0 +1,31 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+
+<h1>List Of Products</h1>   
+<ul>   
+ <li>Name</li>   
+ <li>Price</li>   
+ <li>Description</li>  
+</ul>   
+
+<% @products.each do |product| %>   
+   <ul>   
+     <li><%= product.name %></li>   
+     <li><%= product.price %></li>   
+     <li><%= product.description %></li>    
+<li><%= link_to "Delete", product_path(product), data: { turbo_method: :delete } %></li>
+    </ul>   
+<% end %>     
+
+<h2>Want to add new product?</h2>
+
+<%= button_to 'New',  new_product_path, method: :get%>
+
