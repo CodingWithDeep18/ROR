@@ -1,0 +1,43 @@
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+<h2>Employee Details </h2><hr>
+<h4>Employee Name:<%= @employee.name %></h4>
+<h4>Employee Email:<%= @employee.email %></h4>
+<h4>Employee Phone Number:<%= @employee.phone %></h4>
+<div>
+<h2>Project Details </h2><hr>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Technologies</th>
+      <th>Developer</th>
+      <th>Project Manager</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td><%= project.project_type %></td>
+        <td><%= eval(project.tech).reject(&:blank?).join(',')%></td>
+        <td><%= project.developer %></td>
+        <td><%= eval(project.project_manager).reject(&:blank?).join(',')%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

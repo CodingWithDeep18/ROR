@@ -1,0 +1,44 @@
+<div class="nested-fields">
+  <div>
+    <%= f.label "Project Name" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label "Project Description" %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.label "Project Type" %>
+    <%= f.radio_button :project_type, "new project" %>
+    <%= f.label :project_type_new, "New Project" %>
+    <%= f.radio_button :project_type, "existing project" %>
+    <%= f.label :project_type_existing, "Existing Project" %>
+  </div>
+  <div>
+    <%= f.label "Project Types" %>
+    <%= f.check_box :tech, { multiple: true }, 'Java', nil %>
+    <%= f.label :tech, "Java", for: "tech" %>
+    <%= f.check_box :tech, { multiple: true }, 'Ror', nil %>
+    <%= f.label :tech, "Ror", for: "tech" %>
+    <%= f.check_box :tech, { multiple: true }, 'Php', nil %>
+    <%= f.label :tech, "Php", for: "tech" %>
+    <%= f.check_box :tech, { multiple: true }, 'Python', nil %>
+    <%= f.label :tech, "Python", for: "tech" %>
+  </div>
+  <div>
+    <%= f.label :developer, "Select a developer" %>
+    <%= f.select :developer, options_for_select(["bob", "deni", "john", "don"]) %>
+  </div>
+  <div>
+    <%= f.label :project_manager, "Select a manager" %>
+    <%= f.select :project_manager, options_for_select(["Henry", "Addision", "Spiro", "James"]), {}, { multiple: true } %>
+  </div>
+  <div>
+    <%= link_to_remove_association "Remove Project", f %>
+    <%= f.hidden_field :_destroy %>
+  </div>
+</div>
+
+
+
+
